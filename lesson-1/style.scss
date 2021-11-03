@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.products{
+    background-color: rgb(201, 198, 198);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.product-item{
+    width: 300px;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    p{
+        padding: 10px 0 10px 0;
+    }
+}

@@ -1,0 +1,51 @@
+<script>
+    class Car {
+        constructor(title, price) {
+            this.title = title;
+            this.price = price;
+        }
+    }
+
+    class Factory {
+        // constructor можно задавать, а можно не задавать он имеется по умолчанию (пустой).
+        createCar(title) {
+            console.log(`Начинается сборка автомобиля ${title}`);
+            let car = new Car(title, parseInt(Math.random() * (5000 - 1000) + 1000));
+            return car;
+        }
+    }
+    class Order {
+        constructor(count) {
+            this.sumOrder = 0;
+            this.count = count; //количество автомобилей которое нужно заказать
+            this.cars = []; //в этот массив будем отгружать готовые автомобили
+            this.init();
+            this.showInfo();
+        }
+
+        showInfo(){
+            this.cars.forEach((car, i) => console.log(`${i+1}) Автомобиль ${car.title} стоит ${car.price}`));
+            console.log(`Общая сумма заказа составляет ${this.sumOrder}`)
+        }
+
+        init() {
+            let brends = ['VW', 'Audi', 'Skoda'];
+            let factory = new Factory();
+            for(let i = 0; i < this.count; i++){
+                this.cars.push(factory.createCar(brends[parseInt(Math.random() * brends.length)]));
+                this.sumOrder += this.cars[i].price;
+            }
+        }
+    }
+
+    let order = new Order(parseInt(Math.random() * 30 + 20)); // от 20 до 50
+
+
+    
+</script>
+
+
+
+
+
+

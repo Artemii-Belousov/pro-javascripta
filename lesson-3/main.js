@@ -149,6 +149,7 @@ class Cart extends List{
 
 }
 
+
 class CartItem extends Item{
     constructor(el, img = 'https://picsum.photos/600/300'){
         super(el, img);

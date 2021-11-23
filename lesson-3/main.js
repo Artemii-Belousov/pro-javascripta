@@ -184,3 +184,4 @@ let products = new ProductsList(cart);//Если мы хотим использ�
 //методы которого нам нужны в данном классе
 //products.getJson(`getProducts.json`).then(data => products.handleData(data));
 
+// Test commit
